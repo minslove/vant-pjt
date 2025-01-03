@@ -1,25 +1,25 @@
 <script lang="ts">
   import { ref } from 'vue'
-  import { Field, Switch } from 'vant'
+  import { Switch, Cell } from 'vant'
 
   export default {
     components: {
-      [Field.name]: Field,
+      [Cell.name]: Cell,
       [Switch.name]: Switch,
     },
     setup() {
-      const checked = ref(false);
+      const checked = ref(true);
       return { checked };
     },
   };
 </script>
 
 <template>
-  <van-field name="switch" label="Switch">
-    <template #input>
+  <van-cell center title="Title">
+    <template #right-icon>
       <van-switch v-model="checked" />
     </template>
-  </van-field>
+  </van-cell>
 </template>
 
 <style></style>
