@@ -8,7 +8,11 @@
     --vt-c-black-soft: #222222;
     --vt-c-black-mute: #282828;
   
-    --vt-c-gray: #222;
+    --vt-c-blk: #222;
+    --vt-c-blk70: #666;
+    --vt-c-blk60: #888;
+    --vt-c-blk50: #aaa;
+    --vt-c-blkF7: #f7f7f7;
     --vt-c-ccc: #ccc;
     
     --van-base-font: 
@@ -46,38 +50,23 @@
     --color-border: var(--vt-c-divider-light-2);
     --color-border-hover: var(--vt-c-divider-light-1);
   
-    --color-heading: var(--vt-c-black-soft);
-    --color-text: var(--vt-c-text-light-1);
-  
-    --bg-ccc: var(--vt-c-ccc);
-  
-    --br-secodary: var(--vt-c-ccc);
-  
     --section-gap: 160px;
+  
+    /* custom */
+    --color-heading: var(--vt-c-blk);
+    --color-text: var(--vt-c-blk70);
+    --color-text2: var(--vt-c-blk60);
+    --color-text3: var(--vt-c-blk50);
+    
+    --bg-blk: var(--vt-c-blk);
+    --bg-line: var(--vt-c-blkF7);
+}
 
-    --family-font: var(--van-base-font)
-  }
-  
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --color-background: var(--vt-c-black);
-      --color-background-soft: var(--vt-c-black-soft);
-      --color-background-mute: var(--vt-c-black-mute);
-  
-      --color-border: var(--vt-c-divider-dark-2);
-      --color-border-hover: var(--vt-c-divider-dark-1);
-  
-      --color-heading: var(--vt-c-text-dark-1);
-      --color-text: var(--vt-c-text-dark-2);
-    }
-  }
-  
   *,
   *::before,
   *::after {
     box-sizing: border-box;
     margin: 0;
-    font-weight: normal;
   }
   html {
     font-size: 10px;
@@ -90,7 +79,7 @@
       color 0.5s,
       background-color 0.5s;
     line-height: 1.6;
-    font-family: var(--family-font) !important;
+    font-family: 'SF Pro Display' !important;
     font-size: 1rem;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
