@@ -14,8 +14,8 @@
     </template>
     <template #infoR>
         <p>
-            <span>바로낸 금액</span>
-            <span>30,000원</span>
+          <span>바로낸 금액</span>
+          <span>30,000원</span>
         </p>
     </template>
   </UseHistory>

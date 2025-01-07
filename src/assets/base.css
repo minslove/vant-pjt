@@ -9,6 +9,7 @@
     --vt-c-black-mute: #282828;
   
     --vt-c-blk: #222;
+    --vt-c-blk30: #E6E6E6;
     --vt-c-blk70: #666;
     --vt-c-blk60: #888;
     --vt-c-blk50: #aaa;
@@ -60,6 +61,10 @@
     
     --bg-blk: var(--vt-c-blk);
     --bg-line: var(--vt-c-blkF7);
+    --bg-line2: var(--vt-c-blk30);
+
+    --fw-normal: 400;
+    --fw-bold: 700;
 }
 
   *,
@@ -78,7 +83,7 @@
     transition:
       color 0.5s,
       background-color 0.5s;
-    line-height: 1.6;
+    line-height: 1;
     font-family: 'SF Pro Display' !important;
     font-size: 1rem;
     text-rendering: optimizeLegibility;

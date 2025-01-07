@@ -14,7 +14,12 @@
 .divider {
     width: 100%;
     height: 12px;
-    background-color: var(--bg-lin);
+    background-color: var(--bg-line);
+}
+.divider-h1 {
+    width: 100%;
+    height: 1px;
+    background-color: var(--bg-line2);
 }
 .title-h3 {
     display: flex;
@@ -31,5 +36,6 @@ h3 {
     font-size: 1.3rem;
     font-weight: 400;
     color: var(--color-text);
+    line-height: 1.6;
 }
 </style>

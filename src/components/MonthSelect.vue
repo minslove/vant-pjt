@@ -1,10 +1,9 @@
 <script lang="ts">
   import { ref } from 'vue'
-  import { Button, Popup } from 'vant'
+  import { Popup } from 'vant'
 
   export default {
     components: {
-      [Button.name]: Button,
       [Popup.name]: Popup,
     },
     setup() {
@@ -21,9 +20,9 @@
 </script>
 
 <template>
-    <van-button type="primary" title="Show popup" @click="showPopup">
-        <slot name="title"></slot>
-    </van-button>
+    <button type="button" @click="showPopup" class="select-button">
+      <span class="title">10월<i class="ico ico-select"></i></span>
+    </button>
     <van-popup
         v-model:show="showBottom"
         round
@@ -63,5 +62,34 @@
     height: 5px;
     border-radius: 20px;
     background-color: #ECECEC;
+}
+.select-button .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-heading);
+}
+.ico {
+    display: inline-block;
+}
+.ico-select {
+    width: 2rem;
+    height: 2rem;
+    background: url('../assets/images/ico-selcet.png') no-repeat 0 2px;
+    background-size: 100%;
+}
+.ico-tooltip {
+    width: 1.4rem;
+    height: 1.4rem;
+    background: url('../assets/images/ico-tooltip.png') no-repeat;
+    background-size: 100%;
+}
+.ico-go {
+    width: 1.4rem;
+    height: 1.4rem;
+    background: url('../assets/images/ico-go.png') no-repeat;
+    background-size: 100%;
+}
+.title + .ico {
+    margin-left: 2px;
 }
 </style>

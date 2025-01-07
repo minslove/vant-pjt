@@ -49,7 +49,11 @@
 }
 .usage-history ul li > p > span {
     display: inline-block;
+    line-height: 1.6;
     margin-left: 2px;
+}
+.usage-history ul li > p > span:first-child {
+    margin-left: 0;
 }
 .usage-history ul .title {
     font-size: 1.6rem;

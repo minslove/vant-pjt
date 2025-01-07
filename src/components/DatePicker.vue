@@ -29,16 +29,19 @@
 </script>
 
 <template>
-  <van-button type="primary" title="Show popup"
-    @click="showPicker = true"
-  ><slot name="month"></slot></van-button>
-  <van-popup v-model:show="showPicker" round destroy-on-close position="bottom">
-    <van-date-picker
-      :model-value="pickerValue"
-      @confirm="onConfirm"
-      @cancel="showPicker = false"
-    />
-  </van-popup>
+    <van-button 
+        title="Show popup"
+        @click="showPicker = true"
+    ><slot name="month"></slot>
+    </van-button>
+    <van-popup v-model:show="showPicker" round destroy-on-close position="bottom">
+        <van-date-picker
+            :model-value="pickerValue"
+            :show-toolbar="false"
+            @confirm="onConfirm"
+            @cancel="showPicker = false"
+        />
+    </van-popup>
 </template>
 
 <style></style>

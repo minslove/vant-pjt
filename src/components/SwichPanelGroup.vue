@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import SwichPanel from './SwichPanel.vue'
+    import SwichPanel from './SwichPanel.vue'
 </script>
 
 <template>
