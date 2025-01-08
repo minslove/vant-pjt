@@ -1,13 +1,12 @@
 <script lang="ts">
   import { ref } from 'vue'
-  import { Button, FloatingPanel, Overlay, showToast } from 'vant'
+  import { Button, FloatingPanel, Overlay } from 'vant'
 
   export default {
     components: {
-      [Button.name]: Button,
-      [FloatingPanel.name]: FloatingPanel,
-      [Overlay.name]: Overlay,
-      [showToast.name]: showToast,
+      [Button .name]: Button,
+      [FloatingPanel .name]: FloatingPanel,
+      [Overlay .name]: Overlay,
     },
     setup() {
       const showPopup = ref(false);
@@ -18,9 +17,7 @@
       ];
       const height = ref(anchors[0]);
 
-      const onCancel = () => alert('cancel');
-
-      return { anchors, height, showPopup, onCancel };
+      return { anchors, height, showPopup };
     },
   };
 </script>
@@ -31,8 +28,8 @@
 
   <van-overlay :show="showPopup" z-index="2005" @click="showPopup = false" />
   <van-floating-panel :show="showPopup" v-model:height="height" :anchors="anchors" class="test" :class="{ aaa: showPopup == true }">
-    <div style="text-align: center; padding: 15px; font-size: 2rem;" @cancel="onCancel">
-      <p class="cancel">Test {{ height.toFixed(0) }} px</p>
+    <div style="text-align: center; padding: 15px; font-size: 2rem;">
+      <p>Test {{ height.toFixed(0) }} px</p>
     </div>
   </van-floating-panel>
 </template>
@@ -46,8 +43,5 @@
 }
 [show='true'] {
   display: block;
-}
-.cancel {
-  color:  red;
 }
 </style>
