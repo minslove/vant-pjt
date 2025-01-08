@@ -17,7 +17,12 @@
       ];
       const height = ref(anchors[0]);
 
-      return { anchors, height, showPopup };
+      const modalShow = () => {
+        // alert('test');
+        document.body.classList.add('van-overflow-hidden');
+      };
+
+      return { anchors, height, showPopup, modalShow };
     },
   };
 </script>
@@ -29,7 +34,7 @@
   <van-overlay :show="showPopup" z-index="2005" @click="showPopup = false" />
   <van-floating-panel :show="showPopup" v-model:height="height" :anchors="anchors" class="test" :class="{ aaa: showPopup == true }">
     <div style="text-align: center; padding: 15px; font-size: 2rem;">
-      <p>Test {{ height.toFixed(0) }} px</p>
+      <p @click="modalShow">Test {{ height.toFixed(0) }} px</p>
     </div>
   </van-floating-panel>
 </template>
