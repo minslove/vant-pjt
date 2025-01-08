@@ -42,7 +42,7 @@
     </van-popup>
 </template>
 
-<style>
+<style scoped>
 .bottom-sheet.van-popup--bottom.van-popup--round {
     border-radius: 3rem 3rem 0 0;
     padding-top: 40px;

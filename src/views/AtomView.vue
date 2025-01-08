@@ -9,16 +9,15 @@
   import SwichPanelGroup from '../components/SwichPanelGroup.vue'
   import UseHistoryList from '../components/UseHistoryList.vue'
   import BottomSheet from '../components/BottomSheet.vue'
-  import SelectOption from '../components/--SelectOption.vue'
   import DatePicker from '../components/DatePicker.vue'
-  import FloatingPanel from '../components/FloatingPanel.vue'
   import DragPanel from '../components/DragPanel.vue'
-  import SwichButton from '../components/SwichPanel.vue'
   import SwipeTabs from '../components/SwipeTabs.vue'
-  import Popover from '../components/Popover.vue'
 </script>
 
 <template>
+    <DragPanel />
+    <br>
+    <br>
     <RadioCellGrp />
     <br>
     <br>
@@ -37,6 +36,8 @@
     <AccountInfo />
     <br>
     <br>
+    <br>
+    <br>
     <SectionGroup />
     <br>
     <br>
@@ -49,25 +50,12 @@
     <UseHistoryList />
     <br>
     <br>
-    <BottomSheet><template #title>BottomSheet</template></BottomSheet>
+    <BottomSheet><template #title>design BottomSheet</template></BottomSheet>
     <br>
     <br>
-    <DatePicker><template #month>10월</template></DatePicker>
     <br>
     <br>
-    <SelectOption><template #month>SelectOption</template></SelectOption>
-    <br>
-    <br>
-    <FloatingPanel><template #floating>FloatingPanel</template></FloatingPanel>
-    <br>
-    <br>
-    <DragPanel>DragPanel</DragPanel>
-    <br>
-    <br>
-    <Popover />
-    <br>
-    <br>
-    <SwichButton />
+    <DatePicker><template #month>DatePicker</template></DatePicker>
     <br>
     <br>
     <br>

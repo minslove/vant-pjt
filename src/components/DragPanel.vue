@@ -1,51 +1,53 @@
 <script lang="ts">
   import { ref } from 'vue'
-  import { Button, Overlay, FloatingPanel } from 'vant'
+  import { Button, FloatingPanel, Overlay, showToast } from 'vant'
 
   export default {
     components: {
       [Button.name]: Button,
-      [Overlay .name]: Overlay,
-      [FloatingPanel .name]: FloatingPanel,
+      [FloatingPanel.name]: FloatingPanel,
+      [Overlay.name]: Overlay,
+      [showToast.name]: showToast,
     },
     setup() {
-      const show = ref(false);
-      return { show };
+      const showPopup = ref(false);
+      const anchors = [
+        100,
+        Math.round(0.4 * window.innerHeight),
+        Math.round(0.7 * window.innerHeight),
+      ];
+      const height = ref(anchors[0]);
+
+      const onCancel = () => alert('cancel');
+
+      return { anchors, height, showPopup, onCancel };
     },
   };
 </script>
 
 <template>
-  <van-button type="primary" text="DragPanel" @click="show = true" />
-  <van-overlay :show="show" @click="show = false">
 
+  <van-button type="primary" text="DragPanel" @click="showPopup = true;" />
 
-    <van-floating-panel>
-      <van-cell-group>
-        <van-cell
-          v-for="i in 26"
-          :key="i"
-          :title="String.fromCharCode(i + 64)"
-          size="large"
-        />
-      </van-cell-group>
-    </van-floating-panel>
-
-
-  </van-overlay>
+  <van-overlay :show="showPopup" z-index="2005" @click="showPopup = false" />
+  <van-floating-panel :show="showPopup" v-model:height="height" :anchors="anchors" class="test" :class="{ aaa: showPopup == true }">
+    <div style="text-align: center; padding: 15px; font-size: 2rem;" @cancel="onCancel">
+      <p class="cancel">Test {{ height.toFixed(0) }} px</p>
+    </div>
+  </van-floating-panel>
 </template>
 
-<style>
-  .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
+<style scoped>
+.test {
+  display: none;
+  z-index: 2006;
 
-  .block {
-    width: 120px;
-    height: 120px;
-    background-color: #fff;
-  }
-  </style>
+  transition: var(--van-popup-transition) !important;
+}
+[show='true'] {
+  display: block;
+}
+.cancel {
+  color:  red;
+}
+</style>
