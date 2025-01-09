@@ -1,8 +1,7 @@
 <script setup lang="ts">
-  import RadioCellGrp from '../components/RadioCellGrp.vue'
-  import RadioBttnGrp from '../components/RadioBttnGrp.vue'
-  import CheckboxGrp from '../components/CheckboxGrp.vue'
-  import MonthSelect from '../components/MonthSelect.vue'
+  import RadioButton from '../components/RadioButton.vue'
+  import Checkbox from '../components/Checkbox.vue'
+  import FilterMonth from '../components/FilterMonth.vue'
   import BillingInfo from '../components/BillingInfo.vue'
   import AccountInfo from '../components/AccountInfo.vue'
   import SectionGroup from '../components/SectionGroup.vue'
@@ -10,24 +9,22 @@
   import UseHistoryList from '../components/UseHistoryList.vue'
   import BottomSheet from '../components/BottomSheet.vue'
   import DatePicker from '../components/DatePicker.vue'
-  import DragPanel from '../components/DragPanel.vue'
   import SwipeTabs from '../components/SwipeTabs.vue'
 </script>
 
 <template>
-    <DragPanel />
+  <BottomSheet><template #title>BottomSheet Sample</template></BottomSheet>
+  <FilterMonth><template #title>10월</template></FilterMonth>
+  <DatePicker><template #month>DatePicker</template></DatePicker>
     <br>
     <br>
-    <RadioCellGrp />
+    <br>
+    <RadioButton />
     <br>
     <br>
-    <RadioBttnGrp />
+    <Checkbox />
     <br>
     <br>
-    <CheckboxGrp />
-    <br>
-    <br>
-    <MonthSelect><template #title>10월</template></MonthSelect>
     <br>
     <br>
     <BillingInfo />
@@ -50,15 +47,9 @@
     <UseHistoryList />
     <br>
     <br>
-    <BottomSheet><template #title>design BottomSheet</template></BottomSheet>
-    <br>
-    <br>
-    <br>
-    <br>
-    <DatePicker><template #month>DatePicker</template></DatePicker>
-    <br>
     <br>
     <br>
 </template>
 
-<style></style>
+<style>
+</style>
