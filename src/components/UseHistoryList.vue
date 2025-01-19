@@ -1,10 +1,10 @@
 <script setup lang="ts">
-  import UseHistory from '../components/UseHistory.vue'
+  import UseHistory from '@/components/UseHistory.vue'
 </script>
 
 <template>
   <UseHistory>
-    <template #title>결제내역명 결제내역명 결제내역명 결제내역명 결제내역명</template>
+    <template #title>aaa결제내역명 결제내역명 결제내역명 결제내역명 결제내역명</template>
     <template #price>1,001,000원</template>
     <template #infoL>
         <p><span>2024.12.31</span></p>

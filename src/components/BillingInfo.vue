@@ -9,14 +9,17 @@
 			[Tag.name]: Tag,
 		},
 		setup() {
-			const showBottom = ref(false)
+      const showBottom = ref(false)
 			const showPopup = () => {
-            showBottom.value = true
-        }
-        return {
-            showBottom,
-            showPopup,
-        }
+        showBottom.value = true
+      }
+      const openTooltip = ref(false)
+
+      return {
+          showBottom,
+          showPopup,
+          openTooltip
+      }
     },
 }
 </script>
@@ -25,9 +28,21 @@
     <div class="billing-info">
         <div class="left">
             <div class="top">
+
+
+              <div class="tooltip-wrap">
                 <span class="toolip-title">10월 21일 낼 카드값</span>
+                <button @click="openTooltip = true" class="ico ico-tooltip"></button>
+
+                <div v-if="openTooltip" class="tooltip">
+                  <p>Hello from the modal!</p>
+                  <button @click="openTooltip = false">Close</button>
+                </div>
+              </div>
+
+                <!-- <span class="toolip-title">10월 21일 낼 카드값</span>
                 <button type="button" @click="showPopup" class="ico ico-tooltip"></button>
-                <van-popup v-model:show="showBottom">test</van-popup>
+                <van-popup v-model:show="showBottom">test</van-popup> -->
             </div>
             <div class="end">
                 <span class="price-title">320,400원</span>
@@ -43,6 +58,28 @@
 </template>
 
 <style>
+/* tooltip */
+.tooltip-wrap {
+  position: relative;
+  font-size: 2rem;
+}
+.tooltip {
+  position: absolute;
+  z-index: 999;
+  top: 28px;
+  left: 30px;
+  width: 300px;
+  margin-left: 0;
+  border: 1px solid red;
+  background-color: #fff;
+  border-radius: 1.2rem;
+  padding: 2rem;
+}
+.toolip-title {
+    font-size: 1.4rem;
+    font-weight: 400;
+    vertical-align: middle;
+}
 /* 청구 정보 */
 .billing-info {
   display: flex;
@@ -56,12 +93,6 @@
   font-size: 2.6rem;
   font-weight: 700;
   color: var(--color-heading);
-}
-/* tooltip */
-.toolip-title {
-    font-size: 1.4rem;
-    font-weight: 400;
-    vertical-align: middle;
 }
 /* font */
 .heading {

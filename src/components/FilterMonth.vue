@@ -1,10 +1,12 @@
 <script lang="ts">
   import { ref } from 'vue'
   import { Popup } from 'vant'
+  import RadioCell from '@/components/RadioCell.vue'
 
   export default {
     components: {
       [Popup.name]: Popup,
+      RadioCell
     },
     setup() {
       const showBottom = ref(false)
@@ -28,16 +30,10 @@
         round
         position="bottom"
         class="bottom-sheet"
+        style="max-height: 60%;"
     >
         <div class="drag-button"><i></i></div>
-        sdfasdf<br>
-        sdfasdf<br>
-        sdfasdf<br>
-        sdfasdf<br>
-        sdfasdf<br>
-        sdfasdf<br>
-        sdfasdf<br>
-        sdfasdf<br>
+        <RadioCell />
     </van-popup>
 </template>
 
