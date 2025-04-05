@@ -10,7 +10,7 @@ import { RouterLink, RouterView } from 'vue-router'
       </nav>
     </div>
     <div class="publish-list">
-      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/">Home111</RouterLink>
       <RouterLink to="/atom">Atom</RouterLink>
     </div>
   </header>
