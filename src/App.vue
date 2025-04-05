@@ -11,7 +11,7 @@ import { RouterLink, RouterView } from 'vue-router'
     </div>
     <div class="publish-list">
       <RouterLink to="/">Home111</RouterLink>
-      <RouterLink to="/atom" class="test">Atom park2</RouterLink>
+      <RouterLink to="/atom" class="test aaa">Atom park2</RouterLink>
     </div>
   </header>
 
