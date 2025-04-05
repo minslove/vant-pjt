@@ -6,7 +6,7 @@ import { RouterLink, RouterView } from 'vue-router'
   <header>
     <div class="wrapper">
       <nav>
-        <h1>타이틀 은나 1</h1>
+        <h1>타이틀 은나 3</h1>
       </nav>
     </div>
     <div class="publish-list">
