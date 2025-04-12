@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import DateSelectButton from '../components/--DatePicker.vue'
+import DateSelectButton from '../components/DatePicker.vue'
 </script>
 
 <template>

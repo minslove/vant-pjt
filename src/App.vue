@@ -6,12 +6,12 @@ import { RouterLink, RouterView } from 'vue-router'
   <header>
     <div class="wrapper">
       <nav>
-        <h1>타이틀 은나 3</h1>
+        <h1>타이틀</h1>
       </nav>
     </div>
-    <div class="publish-list">
-      <RouterLink to="/">Home111</RouterLink>
-      <RouterLink to="/atom" class="test aaa">Atom park2</RouterLink>
+    <div class="item-list">
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/atom">Atom</RouterLink>
     </div>
   </header>
 
@@ -20,18 +20,29 @@ import { RouterLink, RouterView } from 'vue-router'
   </main>
 </template>
 
-<style scoped>
-/* delete */
-nav {
-  text-align: center;
-}
-.publish-list {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-a {
-  font-size: 1.4rem;
-  margin-left: 5px;
+<style lang="scss" scoped>
+header {
+  border-bottom: 1px solid var(--color-border);
+  .wrapper {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    nav {
+      h1 {
+        font-weight: 700;
+        color: var(--color-heading);
+      }
+    }
+  }
+  .item-list {
+    position: absolute;
+    right: 10px;
+    top: 17px;
+  }
+  a {
+    font-size: 1.2rem;
+    margin-left: 5px;
+  }
 }
 </style>
