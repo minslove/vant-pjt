@@ -4,19 +4,19 @@
       <slot name="icon"></slot>
     </i>
     <div class="details">
-      <h3>
+      <h2>
         <slot name="heading"></slot>
-      </h3>
-      <slot></slot>
+      </h2>
+      <slot />
     </div>
   </div>
 </template>
 
 <style scoped>
 .item {
-  margin: 2rem 2rem 0;
-  display: flex;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .details {
@@ -33,8 +33,8 @@ i {
   color: var(--color-text);
 }
 
-h3,
-h3 a {
+h2,
+h2 a {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.7;

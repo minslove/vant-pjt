@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import StatementView from '../views/--StatementView.vue'
 import AtomView from '../views/AtomView.vue'
-import AboutView from '../views/--AboutView.vue'
+import StatementView from '../views/StatementView.vue'
+import BoardView from '../views/BoardView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,15 +13,20 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/statement',
-      name: '카드값명세서',
-      component: StatementView,
-    },
-    {
       path: '/atom',
       name: 'atom',
       component: AtomView,
-    }
+    },
+    {
+      path: '/statement',
+      name: '피커',
+      component: StatementView,
+    },
+    {
+      path: '/board',
+      name: '보드게시판',
+      component: BoardView,
+    },
   ],
 })
 

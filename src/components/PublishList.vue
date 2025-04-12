@@ -1,11 +1,11 @@
 <script setup lang="ts">
-  import PublishMenu from './PublishMenu.vue'
-  import DocumentationIcon from './icons/IconDocumentation.vue'
-  import ToolingIcon from './icons/IconTooling.vue'
-  import EcosystemIcon from './icons/IconEcosystem.vue'
-  import CommunityIcon from './icons/IconCommunity.vue'
-  import SupportIcon from './icons/IconSupport.vue'
-  import { RouterLink } from 'vue-router'
+import PublishMenu from './PublishMenu.vue'
+import DocumentationIcon from './icons/IconDocumentation.vue'
+import ToolingIcon from './icons/IconTooling.vue'
+import EcosystemIcon from './icons/IconEcosystem.vue'
+import CommunityIcon from './icons/IconCommunity.vue'
+import SupportIcon from './icons/IconSupport.vue'
+import { RouterLink } from 'vue-router'
 </script>
 
 <template>
@@ -13,14 +13,14 @@
     <template #icon>
       <DocumentationIcon />
     </template>
-    <template #heading><RouterLink to="/statement">카드값 명세서</RouterLink></template>
+    <template #heading><RouterLink to="/statement">DatePicker</RouterLink></template>
   </PublishMenu>
 
   <PublishMenu>
     <template #icon>
       <ToolingIcon />
     </template>
-    <template #heading>교통카드 이용내역</template>
+    <template #heading><RouterLink to="/board">Board</RouterLink></template>
   </PublishMenu>
 
   <PublishMenu>
@@ -50,5 +50,4 @@
     </template>
     <template #heading>약관 동의</template>
   </PublishMenu>
-
 </template>
