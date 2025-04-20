@@ -27,14 +27,14 @@ import { RouterLink } from 'vue-router'
     <template #icon>
       <EcosystemIcon />
     </template>
-    <template #heading>이용내역</template>
+    <template #heading><RouterLink to="/agree">약관동의</RouterLink></template>
   </PublishMenu>
 
   <PublishMenu>
     <template #icon>
       <CommunityIcon />
     </template>
-    <template #heading>카드 관리 - 간편결제 등록</template>
+    <template #heading><RouterLink to="/scroll">섹션스크롤</RouterLink></template>
   </PublishMenu>
 
   <PublishMenu>

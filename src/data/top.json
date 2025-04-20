@@ -1,0 +1,22 @@
+{
+  "articles": [
+    {
+      "title": "JavaScript의 25번째 생일을 축하합니다",
+      "summary": "1996년 Netscape와 Sun Microsystems가 발표한 JavaScript가 2020년, 25주년을 맞이하게 되었습니다!",
+      "link": "https://js25.org",
+      "thumbnailImage": "https://user-images.githubusercontent.com/35371660/101241806-c786d580-373c-11eb-86ba-ed405cfc2ed2.png"
+    },
+    {
+      "title": "2 JavaScript의 25번째 생일을 축하합니다",
+      "summary": "1996년 Netscape와 Sun Microsystems가 발표한 JavaScript가 2020년, 25주년을 맞이하게 되었습니다!",
+      "link": "https://js25.org",
+      "thumbnailImage": "https://user-images.githubusercontent.com/35371660/101241806-c786d580-373c-11eb-86ba-ed405cfc2ed2.png"
+    },
+    {
+      "title": "3 JavaScript의 25번째 생일을 축하합니다",
+      "summary": "1996년 Netscape와 Sun Microsystems가 발표한 JavaScript가 2020년, 25주년을 맞이하게 되었습니다!",
+      "link": "https://js25.org",
+      "thumbnailImage": "https://user-images.githubusercontent.com/35371660/101241806-c786d580-373c-11eb-86ba-ed405cfc2ed2.png"
+    }
+  ]
+}

@@ -1,4 +1,34 @@
-<script setup lang="ts"></script>
+<script lang="ts">
+import { defineComponent, ref, onMounted } from 'vue'
+import Spinner from '../components/Spinner.vue'
+
+export default defineComponent({
+  components: { Spinner },
+  setup() {
+    const loading = ref(true)
+    const newsData = ref([])
+
+    const fetchData = async () => {
+      loading.value = true
+      try {
+        const response = await fetch('./data/top.json')
+        newsData.value = await response.json()
+      } catch (error) {
+        console.error('Error fetching data:', error)
+      } finally {
+        loading.value = false
+      }
+    }
+
+    onMounted(fetchData)
+
+    return {
+      loading,
+      newsData,
+    }
+  },
+})
+</script>
 <template>
   <div>
     <header>
@@ -9,21 +39,26 @@
       <section class="top-news-section">
         <h2>Top News</h2>
         <article id="topNewsList">
-          <div class="spinner-area" />
+          <Spinner v-if="loading" />
+          <div v-else>
+            <ul>
+              <li v-for="news in newsData" :key="news">{{ news.title }}</li>
+            </ul>
+          </div>
         </article>
       </section>
       <aside>
         <section class="latest-section">
           <h3>최신 글</h3>
           <ul class="latest-news-list">
-            <div class="spinner-area" />
+            <Spinner v-if="loading" />
           </ul>
         </section>
         <section class="support-section">
           <h3>Support</h3>
           <div class="github-support">
             <a>
-              <svg viewBox="0 0 16 16" width="16" height="16" class="heart" aria-hidden="ture">
+              <svg viewBox="0 0 16 16" width="16" height="16" class="heart" aria-hidden="true">
                 <path fill-rule="evenodd"></path>
               </svg>
               GibHub Sponsors
@@ -32,7 +67,7 @@
         </section>
       </aside>
     </main>
-    <footer>fe-post.com &copy; 202-2021 FE POST</footer>
+    <footer>fe-post.com &copy; 2020-2021 FE POST</footer>
   </div>
 </template>
 

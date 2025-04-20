@@ -3,6 +3,8 @@ import HomeView from '../views/HomeView.vue'
 import AtomView from '../views/AtomView.vue'
 import StatementView from '../views/StatementView.vue'
 import BoardView from '../views/BoardView.vue'
+import AgreeView from '../views/AgreeView.vue'
+import ScrollView from '../views/ScrollView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +28,16 @@ const router = createRouter({
       path: '/board',
       name: '보드게시판',
       component: BoardView,
+    },
+    {
+      path: '/agree',
+      name: '약관동의',
+      component: AgreeView,
+    },
+    {
+      path: '/scroll',
+      name: '섹션스크롤',
+      component: ScrollView,
     },
   ],
 })
